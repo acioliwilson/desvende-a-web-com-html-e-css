@@ -1,38 +1,40 @@
 <template>
+<!-- First section "HEADER" -->
 <header>
     <div class="container">
-        <div class="d-flex flex-wrap gap-5 justify-content-center align-items-center">
+        <div class="wrapper">
             <div class="infobox">
-                <img src="@/assets/main-image.png" alt="Desvende a Web Com HTML & CSS! EM até 12x de R$ 15,09!">
-                <p class="default">Aprenda as linguagens HTML e CSS do zero e crie sites incríveis sem precisar saber programar!</p>
-                <h1 class="yellow">Inscreva-se agora e garanta:</h1>
-                <ul>
-                    <li>
+                <img src="@/assets/main-image.png" alt="">
+                <p class="subheading">Aprenda as linguagens HTML e CSS do zero e crie sites incríveis sem precisar saber programar!</p>
+                <h1 class="neo-sans">Inscreva-se agora e garanta:</h1>
+                <ul class="list">
+                    <li class="items">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Desconto especial de lançamento: de R$ 497,00 por apenas R$ 197,00!</span>
+                        <span class="text-light">Desconto especial de lançamento: de R$ 497,00 por apenas R$ 197,00!</span>
                     </li>
-                    <li>
+                    <li class="items">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Pagamento facilitado em até 12 parcelas de R$ 15,09.</span>
+                        <span class="text-light">Pagamento facilitado em até 12 parcelas de R$ 15,09.</span>
                     </li>
-                    <li>
+                    <li class="items">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Bônus exclusivos, como e-book gratuito e modelos prontos para usar.</span>
+                        <span class="text-light">Bônus exclusivos, como e-book gratuito e modelos prontos para usar.</span>
                     </li>
-                    <li>
+                    <li class="items">
                         <i class="bi bi-check-circle-fill"></i>
-                        <span>Acesso imediato às aulas e materiais do curso.</span>
+                        <span class="text-light">Acesso imediato às aulas e materiais do curso.</span>
                     </li>
                 </ul>
             </div>
-            <figure>
-                <img src="@/assets/ilustrative-image.png" alt="Curso HTML + CSS">
-                <a href="#" target="_blank" rel="noopener" class="btn-cta-header">INSCREVA-SE AGORA</a>
+            <figure class="illustrative">
+                <img src="@/assets/ilustrative-image.png" alt="">
+                <a href="#" rel="noopener" class="main-cta">INSCREVA-SE AGORA</a>
             </figure>
         </div>
     </div>
     <img src="@/assets/separator.png" class="separator">
 </header>
+<!-- / End First Section "HEADER" -->
 </template>
 
 <style lang="css">
@@ -45,117 +47,152 @@ body {
     font-family: 'Open Sans', sans-serif !important;
 }
 
-header {
-    width: 100vw;
-    min-height: 100vh;
-    background: url('@/assets/header-background.png') no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 100px;
-    position: relative;
+/* Personalizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: #141933;
 }
 
-.infobox {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 50%;
+::-webkit-scrollbar-thumb {
+    background-color: #952AFF;
+    border-radius: 5px;
 }
 
-.infobox img {
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/*
+    First section "Header Section"
+*/
+.wrapper {
     width: 100%;
-    max-width: 500px;
-    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
 }
 
-p.default {
-    font-family: 'Open Sans', sans-serif !important;
-    font-size: 20px;
+.wrapper .infobox {
+    display: table;
+}
+.wrapper .infobox {
+    width: 70% !important;
+}
+
+.subheading {
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.7;
+    margin-top: 30px;
 }
 
-h1.yellow {
-    font-family: 'Neo Sans Std', sans-serif !important;
+h1.neo-sans {
     color: #FFC32A;
-    font-size: 25px;
+    font-size: 1.5rem;
+    font-family: 'Neo Sans Std', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+    letter-spacing: 0.5px;
 }
 
-figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 50%
-}
-
-figure img {
-    max-width: 500px;
-    height: auto;
-}
-
-.infobox ul {
+ul.list {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
-
-.infobox ul li {
+li.items {
     display: flex;
-    gap: 7px;
     align-items: center;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.infobox ul li i {
-    color: #26D8FF;
-}
-
-figure a.btn-cta-header {
-    color: #FFF;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 500;
+    gap: 7px;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.illustrative {
+    width: 30%;
+    min-width: 300px;
+    display: table;
+    text-align: center;
+}
+
+.illustrative img {
+    width: 100%;
+    height: auto !important;
+}
+.illustrative a.main-cta {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    display: table;
+    padding: 14px 30px;
+    border-radius: 15px;
     background: #952AFF;
-    border-radius: 16px;
-    padding: 16px 50px;
     box-shadow: 3px 3px 30px rgba(0, 0, 0, .2);
-    transition: .3s ease all;
-    position: relative;
-    animation: 1s pulse ease-in infinite;
+    margin: 0 auto;
+    transition: .3s ease-out all;
+    animation: 1s pulse ease-out infinite;
+    animation-delay: .3s;
 }
-
+.illustrative a.main-cta:hover {
+    background: rgb(6, 209, 209);
+    transform: scale(1.05);
+}
 @keyframes pulse {
-  0% { box-shadow: 3px 3px 30px rgba(0, 0, 0, .2); }
-  60% { box-shadow: 3px 3px 30px rgba(230, 38, 255, 0.5); }
-  100% { box-shadow: 3px 3px 30px rgba(0, 0, 0, .2); }
-}
-
-@keyframes pulseHover {
-  0% { box-shadow: 3px 3px 30px rgba(0, 0, 0, .2); }
-  60% { box-shadow: 0 0 30px rgba(38, 216, 255, .3); }
-  100% { box-shadow: 3px 3px 30px rgba(0, 0, 0, .2); }
-}
-
-figure a.btn-cta-header:hover {
-    background: #26D8FF;
-    box-shadow: 0 0 30px rgba(38, 216, 255, .2);
-    transform: scale(1.1);
-    animation: 1s pulseHover ease-out infinite;
+    0% {
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, .2);
+    }
+    50% {
+        box-shadow: 3px 3px 30px rgba(148, 11, 228, 0.4);
+    }
 }
 
 .separator {
-    position: absolute;
-    bottom: 2vh;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 50px auto;
+    display: table;
+}
+
+@media screen and (max-width: 768px) {
+
+    .wrapper .infobox,
+    .wrapper .illustrative {
+        width: 100% !important;
+    }
+
+    .wrapper .infobox img,
+    .wrapper .illustrative img {
+        width: 100%;
+        height: auto;
+    }
+    .subheading {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper .infobox,
+    .wrapper .illustrative {
+        width: 100% !important;
+        max-width: 500px;
+    }
+
+    .wrapper .infobox img,
+    .wrapper .illustrative img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
 }
 </style>
