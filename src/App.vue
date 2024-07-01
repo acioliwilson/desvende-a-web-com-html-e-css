@@ -144,49 +144,48 @@
 </template>
 
 <script>
-/* eslint-disable */
 export default {
-    data() {
-        return {
-            faqs: [{
-                    id: 1,
-                    question: "Qual o valor do curso?",
-                    answer: "O valor original do curso é de R$ 497,00. Mas por tempo limitado, você pode adquirir o curso por apenas R$ 197,00 com pagamento facilitado em até 12x de R$ 15,09.",
-                    isActived: true
-                },
-                {
-                    id: 2,
-                    question: "Como posso me inscrever no curso?",
-                    answer: "Para se inscrever no curso, basta clicar no botão 'Inscrever-se' na página do curso. Em seguida, você será direcionado para a página de pagamento, onde poderá escolher a forma de pagamento que preferir.",
-                    isActived: false
-                },
-                {
-                    id: 3,
-                    question: "Como posso realizar o pagamento?",
-                    answer: "Você pode realizar o pagamento do curso com cartão de crédito, boleto bancário ou Pix. O pagamento é processado de forma segura pela Hotmart."
-                },
-                {
-                    id: 4,
-                    question: "Qual o prazo de acesso ao curso?",
-                    answer: "Você terá acesso ao curso por 1 ano após a data da compra. Durante esse período, você poderá assistir às aulas quantas vezes quiser, baixar os materiais do curso e tirar suas dúvidas com os professores."
-                },
-                {
-                    id: 5,
-                    question: "Tenho garantia de satisfação?",
-                    answer: "Sim, oferecemos uma garantia de satisfação de 7 dias. Se você não estiver satisfeito com o curso, poderá solicitar o reembolso integral do seu dinheiro."
-                },
-            ],
-        }
-    },
-    methods: {
-        toggleDropdown(index) {
-            this.faqs.forEach((faq) => (faq.isActived = false));
-            this.faqs[index].isActived = !this.faqs[index].isActived;
-        },
-        redirectToPayment() {
-            window.location.href = 'https://pay.hotmart.com/T93819108Q'
-        }
+  data () {
+    return {
+      faqs: [{
+        id: 1,
+        question: 'Qual o valor do curso?',
+        answer: 'O valor original do curso é de R$ 497,00. Mas por tempo limitado, você pode adquirir o curso por apenas R$ 197,00 com pagamento facilitado em até 12x de R$ 15,09.',
+        isActived: true
+      },
+      {
+        id: 2,
+        question: 'Como posso me inscrever no curso?',
+        answer: "Para se inscrever no curso, basta clicar no botão 'Inscrever-se' na página do curso. Em seguida, você será direcionado para a página de pagamento, onde poderá escolher a forma de pagamento que preferir.",
+        isActived: false
+      },
+      {
+        id: 3,
+        question: 'Como posso realizar o pagamento?',
+        answer: 'Você pode realizar o pagamento do curso com cartão de crédito, boleto bancário ou Pix. O pagamento é processado de forma segura pela Hotmart.'
+      },
+      {
+        id: 4,
+        question: 'Qual o prazo de acesso ao curso?',
+        answer: 'Você terá acesso ao curso por 1 ano após a data da compra. Durante esse período, você poderá assistir às aulas quantas vezes quiser, baixar os materiais do curso e tirar suas dúvidas com os professores.'
+      },
+      {
+        id: 5,
+        question: 'Tenho garantia de satisfação?',
+        answer: 'Sim, oferecemos uma garantia de satisfação de 7 dias. Se você não estiver satisfeito com o curso, poderá solicitar o reembolso integral do seu dinheiro.'
+      }
+      ]
     }
+  },
+  methods: {
+    toggleDropdown (index) {
+      this.faqs.forEach((faq) => (faq.isActived = false))
+      this.faqs[index].isActived = !this.faqs[index].isActived
+    },
+    redirectToPayment () {
+      window.location.href = 'https://pay.hotmart.com/T93819108Q'
+    }
+  }
 }
 </script>
 
@@ -468,24 +467,24 @@ p.info-text {
     line-height: 1.5;
     margin: 5px 0 0 0;
 }
-  
+
   .dropdown-card:hover {
     background-color: #ba7afa;
   }
-  
+
   .dropdown-card i {
     margin-right: 15px;
     transition: transform 0.3s ease;
   }
-  
+
   .dropdown-card.bi-chevron-up i {
     transform: rotate(180deg);
   }
-  
+
   .content {
     flex: 1;
   }
-  
+
   .info-title {
     font-weight: bold;
     margin-bottom: 5px;
@@ -543,7 +542,6 @@ p.info-text {
     0%, 100% { transform: scale(1); box-shadow: 2px 2px 30px rgba(149, 42, 255, .2); }
     50% { transform: scale(1.05); box-shadow: 2px 2px 30px rgba(149, 42, 255, .5); }
   }
-
 
   footer {
     width: 100%;
