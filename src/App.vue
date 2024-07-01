@@ -30,7 +30,7 @@
             </div>
             <div class="col-md-4">
                 <img src="@/assets/ilustrative-image.png" class="ilustrative">
-                <button type="button" class="cta-btn">INSCREVA-SE AGORA</button>
+                <button type="button" class="cta-btn" @click="redirectToPayment">INSCREVA-SE AGORA</button>
             </div>
         </div>
     </div>
@@ -73,7 +73,7 @@
                     <p>Certificado de conclusão: Comprovante de suas habilidades recém-adquiridas para impressionar futuros empregadores ou clientes.</p>
                 </div>
             </div>
-            <button type="button" class="clouds-cta-btn">INSCREVA-SE AGORA</button>
+            <button type="button" class="clouds-cta-btn" @click="redirectToPayment">INSCREVA-SE AGORA</button>
         </div>
     </div>
 </section>
@@ -105,7 +105,7 @@
         <p class="last-section-text">
             Inscreva-se agora e comece sua jornada como web designer de sucesso!
         </p>
-        <button type="button" class="last-section-cta">
+        <button type="button" class="last-section-cta" @click="redirectToPayment">
             INSCREVA-SE AGORA
         </button>
     </div>
@@ -183,6 +183,9 @@ export default {
             this.faqs.forEach((faq) => (faq.isActived = false));
             this.faqs[index].isActived = !this.faqs[index].isActived;
         },
+        redirectToPayment() {
+            window.location.href = 'https://pay.hotmart.com/T93819108Q'
+        }
     }
 }
 </script>
