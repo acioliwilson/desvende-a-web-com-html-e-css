@@ -93,6 +93,54 @@
     </div>
 </section>
 <!-- /Ending FAQ's sesction -->
+
+<!-- Starting Last Section -->
+<section class="last-section">
+    <div class="container">
+        <img src="@/assets/separator.png" class="mx-auto d-table">
+        <h3 class="neo-sans-yellow-section-title">
+            Não deixe essa <br />
+            oportunidade passar!
+        </h3>
+        <p class="last-section-text">
+            Inscreva-se agora e comece sua jornada como web designer de sucesso!
+        </p>
+        <button type="button" class="last-section-cta">
+            INSCREVA-SE AGORA
+        </button>
+    </div>
+</section>
+<!-- /Ending Last Section -->
+
+ <!-- Starting Footer Section -->
+<footer>
+    <div class="container">
+        <div class="footer">
+            <div class="company-info">
+                <a href="https://www.woxiee.vercel.app" target="_blank" rel="noopener">
+                    <img src="@/assets/logo.png" alt="Woxiee">
+                </a>
+                <a href="mailto:suporte@woxiee.com" target="_blank" rel="noopener" class="emailaddress">suporte@woxiee.com</a>
+                <span class="cnpj">41.562.138/0001-61</span>
+            </div>
+            <div class="social-media">
+                <h3>Acompanhe</h3>
+                <div class="d-flex gap-3 justify-content-end">
+                    <a href="#" target="_blank" rel="noopener" class="social-link">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener" class="social-link">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener" class="social-link">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+ <!-- /Ending Footer Section -->
 </template>
 
 <script>
@@ -439,5 +487,102 @@ p.info-text {
     font-weight: bold;
     margin-bottom: 5px;
   }
-  
+
+  .last-section {
+    width: 100%;
+    min-height: 100vh;
+    background: url('@/assets/arrows-background.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .neo-sans-yellow-section-title {
+    font-family: 'Neo Sans Std', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #FFC32A;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin: 30px 0 0 0;
+    text-align: center;
+  }
+
+  .last-section-text {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 15px 0 0 0;
+    line-height: 1.5;
+  }
+
+  .last-section-cta {
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 14px 30px;
+    display: table;
+    background: #952AFF;
+    border: 1px solid #CD8DFF;
+    box-shadow: 2px 2px 30px rgba(149, 42, 255, .5);
+    border-radius: 15px;
+    margin: 30px auto;
+    animation: 1s pulse ease infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: 2px 2px 30px rgba(149, 42, 255, .2); }
+    50% { transform: scale(1.05); box-shadow: 2px 2px 30px rgba(149, 42, 255, .5); }
+  }
+
+
+  footer {
+    width: 100%;
+    padding: 30px 0;
+    background: #080B1D;
+  }
+  .footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .company-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .emailaddress {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: #28C6E9;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  .cnpj {
+    ont-size: 18px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: #6872AF;
+  }
+
+  .social-media h3 {
+    font-size: 25px;
+    color: #FFF;
+    font-family: 'Neo Sans Std', sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .social-link {
+    color: #26D8FF;
+    font-size: 22px;
+  }
 </style>
