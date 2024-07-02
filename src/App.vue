@@ -1,8 +1,8 @@
 <template>
 <!-- Starting First Section -->
-<header class="pt-5">
-    <div class="container pt-5">
-        <div class="row mt-5">
+<header>
+    <div class="container">
+        <div class="row">
             <div class="col-md-8">
                 <img src="@/assets/main-image.png" class="main-image">
                 <p class="intro">
@@ -125,7 +125,7 @@
             </div>
             <div class="social-media">
                 <h3>Acompanhe</h3>
-                <div class="d-flex gap-3 justify-content-end">
+                <div class="social-items">
                     <a href="#" target="_blank" rel="noopener" class="social-link">
                         <i class="bi bi-instagram"></i>
                     </a>
@@ -219,6 +219,14 @@ body {
 */
 header {
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        padding-top: 50px;
+    }
 }
 
 .main-image {
@@ -239,6 +247,12 @@ p.intro {
     width: 100%;
     height: auto;
     margin-top: 100px;
+}
+
+@media screen and (max-width: 700px) {
+    .ilustrative {
+        margin-top: -10px;
+    }
 }
 
 /*
@@ -568,7 +582,7 @@ p.info-text {
     margin-top: 10px;
   }
   .cnpj {
-    ont-size: 18px;
+    font-size: 18px;
     font-weight: 500;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
@@ -585,5 +599,23 @@ p.info-text {
   .social-link {
     color: #26D8FF;
     font-size: 22px;
+  }
+
+  .social-items {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-items {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
   }
 </style>
