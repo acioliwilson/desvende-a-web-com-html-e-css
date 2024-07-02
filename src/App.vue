@@ -4,12 +4,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <img src="@/assets/main-image.png" class="main-image">
-                <p class="intro">
+                <img src="@/assets/animated-title.gif" class="main-image">
+                <p class="intro" style="padding-left: 30px;">
                     Aprenda as linguagens HTML e CSS do zero e crie sites incríveis sem precisar saber programar!
                 </p>
-                <h2 class="neo-sans-yellow-title">Inscreva-se agora e garanta:</h2>
-                <ul class="items-list">
+                <h2 class="neo-sans-yellow-title" style="padding-left: 30px;">Inscreva-se agora e garanta:</h2>
+                <ul class="items-list" style="padding-left: 30px;">
                     <li class="item">
                         <i class="bi bi-check-circle-fill"></i>
                         <span>Desconto especial de lançamento: de R$ 497,00 por apenas R$ 197,00!</span>
@@ -29,7 +29,7 @@
                 </ul>
             </div>
             <div class="col-md-4">
-                <img src="@/assets/ilustrative-image.png" class="ilustrative">
+                <img src="@/assets/html-and-css.gif" class="ilustrative">
                 <button type="button" class="cta-btn" @click="redirectToPayment">INSCREVA-SE AGORA</button>
             </div>
         </div>
@@ -232,7 +232,7 @@ header {
 .main-image {
     width: 100%;
     height: auto;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 p.intro {
