@@ -44,6 +44,8 @@
                         <img src="@/assets/waves-fill.png" class="waves-fill">
                         <img src="@/assets/html5.png" class="html5">
                         <img src="@/assets/css3.png" class="css3">
+                        <img src="@/assets/sparkle.png" class="sparkle-1">
+                        <img src="@/assets/sparkle.png" class="sparkle-2">
                     </div>
                 </div>
                 <button type="button" class="cta-btn" @click="redirectToPayment">INSCREVA-SE AGORA</button>
@@ -138,16 +140,16 @@
 
  <!-- Starting Footer Section -->
 <footer>
-    <div class="container">
+    <div class="container appear">
         <div class="footer">
-            <div class="company-info appear">
+            <div class="company-info">
                 <a href="https://www.woxiee.vercel.app" target="_blank" rel="noopener">
                     <img src="@/assets/logo.png" alt="Woxiee">
                 </a>
                 <a href="mailto:suporte@woxiee.com" target="_blank" rel="noopener" class="emailaddress">suporte@woxiee.com</a>
                 <span class="cnpj">41.562.138/0001-61</span>
             </div>
-            <div class="social-media appear">
+            <div class="social-media">
                 <h3>Acompanhe</h3>
                 <div class="social-items">
                     <a href="#" target="_blank" rel="noopener" class="social-link">
@@ -264,7 +266,7 @@ p.intro {
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     line-height: 1.7;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .ilustrative {
@@ -656,6 +658,10 @@ p.info-text {
 @media screen and (max-width: 700px) {
     .wrapper {
         margin-top: 50px !important;
+        width: 100%;
+    }
+    .headline-3 {
+        font-size: 1.2rem !important;
     }
 }
 
@@ -665,7 +671,17 @@ p.info-text {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    opacity: .3;
+    opacity: 0;
+    animation: 1s bounceIn ease forwards;
+    animation-delay: .4s;
+}
+
+@media screen and (max-width: 700px) {
+    .tag {
+        width: 100%;
+        height: auto;
+        max-width: 550px;
+    }
 }
 
 .text-content {
@@ -739,16 +755,17 @@ h3.headline-3 {
     text-align: center;
     box-shadow: 2px 0 30px rgba(0, 0, 0, .2);
     position: relative;
+    z-index: 100 !important;
     opacity: 0;
     transform: translateY(-12px) skew(-9deg) rotate(-5deg);
     animation: 1s swipeInTop3 ease forwards;
     animation-delay: 1.2s;
-    z-index: 3;
 }
 
-h3.headline-3:before {
+h3.headline-3::before {
     content: '';
     position: absolute;
+    z-index: -1;
     width: calc(100% + 9px);
     height: calc(100% + 9px);
     border-radius: 900px;
@@ -894,18 +911,24 @@ h3.headline-3:before {
 
 @media screen and (max-width: 600px) {
     .wrapper-html-and-css {
-        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 2rem auto;
     }
     .html5 {
         bottom: -5rem;
-        right: -2rem;
-        transform: rotate(15deg) scale(.8);
+        right: -2.5rem;
+        transform: rotate(15deg) scale(.7);
+        animation: 3s htmlBalanceMobile ease infinite;
     }
 
     .css3 {
-        top: -4rem;
-        left: -4.5rem;
-        transform: rotate(-18deg) scale(.9);
+        top: -2.5rem;
+        left: -2rem;
+        transform: rotate(-18deg) scale(.8);
     }
 }
 
@@ -916,11 +939,11 @@ h3.headline-3:before {
 
 @keyframes htmlBalance {
     0%, 100% { transform: rotate(15deg) scale(.9) translateY(0);  }
-    50% { transform: rotate(15deg) scale(.9) translateY(-2rem) translateX(-.2rem) rotate(-3deg); }
+    50% { transform: scale(.9) translateY(-2rem) translateX(-.2rem) rotate(-3deg); }
 }
 @keyframes htmlBalanceMobile {
-    0%, 100% { transform: rotate(15deg) scale(.8) translateY(0); }
-    50% { transform: rotate(15deg) scale(.8) translateY(-2rem) translateX(-.5rem) rotate(-1deg); }
+    0%, 100% { transform: rotate(15deg) scale(.7) translateY(0); }
+    50% { transform: scale(.8) translateY(-1rem) translateX(-.5rem) rotate(-1deg); }
 }
 
 @keyframes cssBalance {
@@ -1029,4 +1052,41 @@ h3.headline-3:before {
     bottom: -10rem;
 }
 
+/*
+    Sparkles Starts
+*/
+.sparkle-1 {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(0rem) translateY(0rem) scale(1) rotate(0);
+    animation: 3.5s sparkle-1 ease infinite;
+    animation-delay: .3s;
+}
+
+.sparkle-2 {
+    width: 15px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0rem, 0rem) scale(1) rotate(10deg);
+    animation: 3.5s sparkle-2 ease infinite;
+    animation-delay: .3s;
+}
+
+@keyframes sparkle-1 {
+    0%, 100% { transform: translateX(0rem) translateY(0rem) scale(.8) rotate(0); }
+    50% { transform: translateX(-2rem) translateY(2rem) scale(1) rotate(25deg); }
+}
+
+@keyframes sparkle-2 {
+    0%, 100% { transform: translate(0rem, 0rem) scale(1) rotate(10deg); }
+    50% { transform: translate(2rem, -2rem) scale(1) rotate(15deg); }
+}
+/*
+    Sparkles Ends
+*/
 </style>
